@@ -45,8 +45,6 @@ And the C code in output file ***sin_lut.txt***:
  * @note   This table is automatically generated with a help of
  *         sine_lut_gen.py python script version V0.1.0
  *
- *         Script can be found under /utils directory
- *
  *     Size of LUT in bytes: 2048
  *
  *     Generated sine signal property:

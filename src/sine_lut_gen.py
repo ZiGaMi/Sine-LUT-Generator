@@ -62,8 +62,6 @@ def write_c_comment(file, size_of_element):
     file.write( " * @note   This table is automatically generated with a help of\n" );
     file.write( " *         sine_lut_gen.py python script version %s\n" % SCRIPT_VER );
     file.write( " *\n" );
-    file.write( " *         Script can be found under /utils directory\n" );
-    file.write( " *\n" );
     file.write( " *     Size of LUT in bytes: %s\n" % ( size_of_element * N ));
     file.write( " *\n" );
     file.write( " *     Generated sine signal property:\n" );
