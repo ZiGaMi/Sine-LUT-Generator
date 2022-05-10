@@ -1,10 +1,17 @@
 # **Sine LUT Generator**
-This repository contains python script for generation of sine LUT for C language for general embedded applications use. 
+This repository contains python script for generation of sine LUT for C language for general embedded applications use. Script can also shows real and discreted generated sine signal. C code is outputed in separate file named ***"sin_lut.txt"*** where user can simply copy&paste to actual software project as it is C syntax complient.
 
 ## **Script Configurations**
 
-Setup sine LUT generator by the needs of the application. Following configuration are example of using 12-bit DAC with 2.5V reference. Generated sine will have a 1V of DC-offset and 0.9V amplitude.
+Sine LUT generator contains following configurations:
+ - Number of points in table
+ - DAC resolution in bits
+ - DAC voltage reference in volts
+ - DC-offset of generated sine signal
+ - Amplitude of generated sine signal
+ - Phase of generated sine signal
 
+Following configuration are example of using 12-bit DAC with 2.5V reference. Generated sine will have a 1V of DC-offset and 0.9V amplitude.
 ```Python
 # Number of elements in LUT
 N = 1024
@@ -114,7 +121,6 @@ const uint16_t gu16_sin_lut[1024] = {
     1493, 1502, 1511, 1520, 1529, 1538, 1547, 1556, 1565, 1574, 1583, 1592, 1601, 1610, 1619, 1628 
 };
 ```
-
 
 ## **Real life application usage**
 
