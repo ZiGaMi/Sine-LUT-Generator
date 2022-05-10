@@ -144,10 +144,10 @@ __RAM_FUNC__ sin_cos_status_t sin_cos_hndl(const int16_t theta_req_raw)
 	uint16_t 			cos_index	= 0;
 
 	// Divide by 64 as having 1024 samples in LUT and input is 16-bit angle
-	// Add half of the LUT size as LUT is being generated in negative wave
-	sin_index = (( theta_req_raw >> 6 ) + SIN_COS_LUT_SIZE_HALF );
+	sin_index = ( theta_req_raw >> 6 );
 
-	// Phase offset for 1/4 of the size in LUT
+	// Phase offset for 1/4 of the size in LUT will
+    // result in 90deg phase shift -> sin(x+90deg) = cos(x)
 	cos_index = ( sin_index + SIN_COS_LUT_SIZE_FOURTH );
 
 	// Wrap
